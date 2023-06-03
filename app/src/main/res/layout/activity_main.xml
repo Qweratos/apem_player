@@ -4,13 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".MainActivity">
+
 
     <TextView
         android:id="@+id/txtSname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="song title"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,7 +26,10 @@
         android:layout_height="17dp"
         android:layout_marginTop="3dp"
         android:layout_marginEnd="14dp"
+        android:progressTint="#FFFFFF"
         app:layout_constraintEnd_toStartOf="@+id/txtSongTime"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/txtStartTime"
         app:layout_constraintTop_toTopOf="@+id/txtSongTime"
         tools:ignore="MissingConstraints" />
 
@@ -34,6 +40,7 @@
         android:layout_marginStart="43dp"
         android:layout_marginBottom="167dp"
         android:text="Czas od:"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
@@ -45,6 +52,7 @@
         android:layout_marginEnd="2dp"
         android:layout_marginBottom="19dp"
         android:text="Czas do: "
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/txtSongTime"
         app:layout_constraintEnd_toEndOf="@+id/txtSongTime"
         tools:ignore="MissingConstraints" />
@@ -55,6 +63,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
         android:text="0min, 0sec"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         tools:ignore="MissingConstraints" />
@@ -66,8 +75,10 @@
         android:layout_marginStart="9dp"
         android:layout_marginBottom="127dp"
         android:text="0min, 0sec"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/btnForward" />
+    />
 
     <ImageButton
         android:id="@+id/btnPlay"
@@ -77,6 +88,7 @@
         android:src="@android:drawable/ic_media_play"
         app:layout_constraintBottom_toBottomOf="@+id/btnPause"
         app:layout_constraintEnd_toStartOf="@+id/btnPause"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btnBackward"
         app:layout_constraintTop_toTopOf="@+id/btnPause"
         app:srcCompat="@android:drawable/ic_media_play" />
@@ -90,6 +102,7 @@
         android:src="@android:drawable/ic_media_pause"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnForward"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btnPlay"
         app:layout_constraintTop_toTopOf="@+id/sBar"
         app:srcCompat="@android:drawable/ic_media_pause" />
@@ -102,6 +115,7 @@
         android:src="@android:drawable/ic_media_ff"
         app:layout_constraintBottom_toBottomOf="@+id/btnPause"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btnPause"
         app:layout_constraintTop_toTopOf="@+id/btnPause"
         app:srcCompat="@android:drawable/ic_media_ff" />
@@ -111,12 +125,26 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
+        android:foregroundTint="#BD6464"
         android:src="@android:drawable/ic_media_rew"
         app:layout_constraintBottom_toBottomOf="@+id/btnPlay"
         app:layout_constraintEnd_toStartOf="@+id/btnPlay"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/btnPlay"
         app:srcCompat="@android:drawable/ic_media_rew"
         tools:ignore="MissingConstraints" />
+
+    <!--    <FrameLayout-->
+    <!--        android:id="@+id/imageView"-->
+    <!--        android:layout_width="341dp"-->
+    <!--        android:layout_height="100dp"-->
+    <!--        android:background="#48FFFFFF"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:srcCompat="#CE393939"-->
+    <!--        tools:layout_editor_absoluteY="569dp"-->
+    <!--        tools:ignore="MissingConstraints" />-->
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
